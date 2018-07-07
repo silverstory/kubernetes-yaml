@@ -1,0 +1,38 @@
+apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ciss
+spec:
+  selector:
+    matchLabels:
+      app: ciss
+      tier: frontend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ciss
+        tier: frontend
+    spec:
+      containers:
+      - name: ciss
+        image: iameprel/ciss:0.0.7
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+        - name: DB_HOST
+          value: local-mongo-server-ip
+        - name: DB_MODE
+          value: PRODUCTION
+        - name: DB_NAME
+          value: ciss
+        - name: DB_USER_NAME
+          value: test
+        - name: DB_PASSWORD
+          value: test
+        - name: JWT_SECRET
+          value: fhudsifdsifdsjfhsdufhdsjfhdsfoihfewioureiuwru9w08320ruffu0dsf8dsf697sd56sd4fs53v4df2gfd52gfdg35fdg
+        ports:
+        - containerPort: 3000
