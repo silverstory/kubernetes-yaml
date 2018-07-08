@@ -14,6 +14,7 @@ spec:
   # loadBalancerIP: 78.11.24.19 #  https://kubernetes.io/docs/concepts/services-networking/service/
   # eto orig dito
   # type: LoadBalancer
+  # Note: Gagana lang ang loadBalancer sa cloud hindi sa on-prem
   ports:
   - port: 3000
     targetPort: 3000
