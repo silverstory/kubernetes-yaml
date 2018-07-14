@@ -1,0 +1,47 @@
+172.18.117.20 - new-kube-master
+
+172.22.164.178 - kube-master
+
+255.255.255.240
+
+172.18.117.31
+
+
+create a cluster
+
+swapoff -a
+
+sudo kubeadm init
+
+
+reset a cluster
+
+sudo kubeadm reset
+
+swapoff -a
+
+sudo kubeadm init
+
+
+set ubuntu 18.04 static ip
+https://arador.com/how-to-configure-a-static-ip-address-in-ubuntu-18-04/
+
+
+Cluster Join Command
+
+Your Kubernetes master has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+You can now join any number of machines by running the following on each node
+as root:
+
+  kubeadm join 172.18.117.20:6443 --token dhsmjr.uoooybq51u6zye9x --discovery-token-ca-cert-hash sha256:be8b9def2cdb8db80ba0605339643017107e620384268113b7c2cc5321ce56df
