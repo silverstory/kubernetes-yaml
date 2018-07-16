@@ -41,6 +41,7 @@ spec:
         - name: TWILIO_AUTH_TOKEN
           value: twilio-auth-token
         - name: TWILIO_FROM_NUMBER
-          value: twilio-from-number
+          value: "twilio-from-number"
+          # twilio number has to have double qoutes just like any numeric values
         ports:
         - containerPort: 3000
