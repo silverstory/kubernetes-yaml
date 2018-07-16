@@ -7,7 +7,8 @@ metadata:
     tier: frontend
 spec:
   # comment or delete the following line if you want to use a LoadBalancer
-  type: NodePort 
+  type: LoadBalancer
+  # dati: NodePort kaso not working eh, walang external-ip
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
   # clusterIP: 10.0.171.239 #      galing sa
