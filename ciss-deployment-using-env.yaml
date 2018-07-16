@@ -36,5 +36,11 @@ spec:
           value: test
         - name: JWT_SECRET
           value: fhudsifdsifdsjfhsdufhdsjfhdsfoihfewioureiuwru9w08320ruffu0dsf8dsf697sd56sd4fs53v4df2gfd52gfdg35fdg
+        - name: TWILIO_ACCOUNT_SID
+          value: AC5a0315957f317a815fbdad3d754b3aab
+        - name: TWILIO_AUTH_TOKEN
+          value: c07cef4f79c25fa60823d82641071bf6
+        - name: TWILIO_FROM_NUMBER
+          value: +16613385845
         ports:
         - containerPort: 3000
