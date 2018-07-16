@@ -22,6 +22,13 @@ swapoff -a
 
 sudo kubeadm init
 
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+kubectl get pods --all-namespaces
+
+kubectl get nodes
+
+https://linuxconfig.org/how-to-install-kubernetes-on-ubuntu-18-04-bionic-beaver-linux
 
 set ubuntu 18.04 static ip
 https://arador.com/how-to-configure-a-static-ip-address-in-ubuntu-18-04/
