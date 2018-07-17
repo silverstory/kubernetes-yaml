@@ -17,31 +17,30 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: ciss
-        image: iameprel/ciss-kube:0.0.10
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        env:
-        - name: DB_HOST
-          value: local-mongo-server-ip
-        - name: DB_MODE
-          value: PRODUCTION
-        - name: DB_NAME
-          value: ciss
-        - name: DB_USER_NAME
-          value: test
-        - name: DB_PASSWORD
-          value: test
-        - name: JWT_SECRET
-          value: your-jwt-secret
-        - name: TWILIO_ACCOUNT_SID
-          value: twilio-account-sid
-        - name: TWILIO_AUTH_TOKEN
-          value: twilio-auth-token
-        - name: TWILIO_FROM_NUMBER
-          value: "twilio-from-number"
-          # twilio number has to have double qoutes just like any numeric values
-        ports:
-        - containerPort: 3000
+        - name: ciss
+          image: iameprel/ciss:0.0.9
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          env:
+          - name: DB_HOST
+            value: 192.168.3.25
+          - name: DB_MODE
+            value: PRODUCTION
+          - name: DB_NAME
+            value: ciss
+          - name: DB_USER_NAME
+            value: myUser
+          - name: DB_PASSWORD
+            value: xyz123
+          - name: JWT_SECRET
+            value: fhudsifdsifdsjfhsdufhdsjfhdsfoihfewioureiuwru9w08320ruffu0dsf8dsf697sd56sd4fs53v4df2gfd52gfdg35fdg
+          - name: TWILIO_ACCOUNT_SID
+            value: AC5a0315957f317a815fbdad3d754b3aab
+          - name: TWILIO_AUTH_TOKEN
+            value: c07cef4f79c25fa60823d82641071bf6
+          - name: TWILIO_FROM_NUMBER
+            value: "+16613385845"
+          ports:
+          - containerPort: 3000
