@@ -25,22 +25,22 @@ spec:
               memory: 100Mi
           env:
           - name: DB_HOST
-            value: 192.168.3.25
+            value: mongo-db-ip
           - name: DB_MODE
             value: PRODUCTION
           - name: DB_NAME
-            value: ciss
+            value: db-name
           - name: DB_USER_NAME
-            value: myUser
+            value: db-user-name
           - name: DB_PASSWORD
-            value: xyz123
+            value: db-password
           - name: JWT_SECRET
-            value: fhudsifdsifdsjfhsdufhdsjfhdsfoihfewioureiuwru9w08320ruffu0dsf8dsf697sd56sd4fs53v4df2gfd52gfdg35fdg
+            value: jwt-secret
           - name: TWILIO_ACCOUNT_SID
-            value: AC5a0315957f317a815fbdad3d754b3aab
+            value: twilio-account-sid
           - name: TWILIO_AUTH_TOKEN
-            value: c07cef4f79c25fa60823d82641071bf6
+            value: twilio-auth-token
           - name: TWILIO_FROM_NUMBER
-            value: "+16613385845"
+            value: "twilio-from-number"
           ports:
           - containerPort: 3000
